@@ -4,6 +4,8 @@
   "description": "It is a project that seeks to integrate applications with AI, making use of OpenAI tools to translate text or generate images, also using DeepSeek.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon build/index.js",
+    "build": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
