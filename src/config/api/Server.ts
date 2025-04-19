@@ -4,6 +4,7 @@ import morgan from "morgan";
 
 import { PORT_BACKEND } from "../../helpers/constans/config";
 import apiTranslatorRoute from "../../app/translator/route/translatorRoute";
+import apiImageRoute from "../../app/imageGenerator/route/imageRoute";
 class Server {
   public app: express.Application;
 
@@ -23,6 +24,7 @@ class Server {
 
   public loadRoutes(): void {
     this.app.use("/api/v1", apiTranslatorRoute);
+    this.app.use("/api/v1/image", apiImageRoute);
   }
 
   public start(): void {

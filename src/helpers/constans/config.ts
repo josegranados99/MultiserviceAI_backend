@@ -8,15 +8,25 @@ export const MODEL_OPENAI = String(process.env.MODEL_OPENAI);
 export const MODEL_DEEPSEEK = String(process.env.MODEL_DEEPSEEK);
 export const BASE_URL_DEEPSEEK = String(process.env.BASE_URL_DEEPSEEK);
 
+//IMAGE
+export const MODEL_DALLE_2 = String(process.env.MODEL_DALLE_2);
+export const MODEL_DALLE_3 = String(process.env.MODEL_DALLE_3);
+
 //PROMPTS
-export const SYSTEM_RESTRICTION = [
-  String(process.env.SYSTEM_RESTRICTION_1),
-  String(process.env.SYSTEM_RESTRICTION_2),
-  String(process.env.SYSTEM_RESTRICTION_3),
+export const SYSTEM_RESTRICTION_TRANSLATE = [
+  String(process.env.SYSTEM_RESTRICTION_TRANSLATE_1),
+  String(process.env.SYSTEM_RESTRICTION_TRANSLATE_2),
+  String(process.env.SYSTEM_RESTRICTION_TRANSLATE_3),
 ];
-export const SYSTEM_RESTRICTION_1 = String(process.env.SYSTEM_RESTRICTION_1);
-export const SYSTEM_RESTRICTION_2 = String(process.env.SYSTEM_RESTRICTION_2);
-export const SYSTEM_RESTRICTION_3 = String(process.env.SYSTEM_RESTRICTION_3);
+export const SYSTEM_RESTRICTION_IMAGE_1 = String(
+  process.env.SYSTEM_RESTRICTION_IMAGE_1
+);
+export const SYSTEM_RESTRICTION_IMAGE_2 = String(
+  process.env.SYSTEM_RESTRICTION_IMAGE_2
+);
+export const SYSTEM_RESTRICTION_IMAGE_3 = String(
+  process.env.SYSTEM_RESTRICTION_IMAGE_3
+);
 export const USER_REQUEST_TRANSLATE = String(
   process.env.USER_REQUEST_TRANSLATE
 );

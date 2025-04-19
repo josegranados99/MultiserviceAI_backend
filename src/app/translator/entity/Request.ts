@@ -1,20 +1,17 @@
 class RequestUser {
   private _userCode: string;
-  private _sourceLanguage: string;
-  private _targetLanguage: string;
+  private _languaje: string;
   private _modelAI: string;
   private _text: string;
 
   constructor(
     userCode: string,
-    sourceLanguage: string,
-    targetLanguage: string,
+    language: string,
     modelAI: string,
     text: string
   ) {
     this._userCode = userCode;
-    this._sourceLanguage = sourceLanguage;
-    this._targetLanguage = targetLanguage;
+    this._languaje = language;
     this._modelAI = modelAI;
     this._text = text;
   }
@@ -23,12 +20,9 @@ class RequestUser {
     return this._userCode;
   }
 
-  public get sourceLanguage(): string {
-    return this._sourceLanguage;
-  }
 
-  public get targetLanguage(): string {
-    return this._targetLanguage;
+  public get language(): string {
+    return this._languaje;
   }
 
   public get modelAI(): string {
@@ -43,12 +37,8 @@ class RequestUser {
     this._userCode = value;
   }
 
-  public set sourceLanguage(value: string) {
-    this._sourceLanguage = value;
-  }
-
-  public set targetLanguage(value: string) {
-    this._targetLanguage = value;
+  public set language(value: string) {
+    this._languaje = value;
   }
 
   public set modelAI(value: string) {

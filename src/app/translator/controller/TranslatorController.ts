@@ -10,18 +10,18 @@ import TranslatorService from "../service/TranslatorService";
 class TranslatorController extends TranslatorService {
   public translateText(req: Request, res: Response): void {
     const { modelAI } = req.body as RequestUser;
-    console.log("model:", modelAI);
+    console.log("modelAI:", modelAI);
     let model = "";
     let objOpenAI: any;
 
     if (modelAI === MODEL_SUPPORT_OPENAI) {
       model = MODEL_OPENAI;
       objOpenAI = objOpenAIController.translateStrategy();
-      console.log("model:", model);
     } else if (modelAI === MODEL_SUPPORT_DEEPSEEK) {
       model = MODEL_DEEPSEEK;
       objOpenAI = objDeepSeekController.translateStrategy();
     }
+    console.log("model:", model);
 
     const paramsAI = ParamsAIController.getPasrams(req);
     TranslatorService.translate(model, paramsAI, objOpenAI, res);

@@ -12,7 +12,7 @@ class TranslatorService {
     try {
       const response = await objOpenAI.chat.completions.create({
         model: modelAI,
-        messages: paramsIA,
+        messages:paramsIA,
         max_tokens: 1000,
         response_format: {
           type: "text",
